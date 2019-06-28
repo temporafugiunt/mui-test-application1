@@ -6,6 +6,8 @@ import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 
+import { istioAppDesignation } from "variables/general.jsx";
+
 const dashboardRoutes = [
   {
     path: "/dashboard",
@@ -21,7 +23,10 @@ const dashboardRoutes = [
     name: "Daily Checklists - App 2",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
-    component: TableList,
+    component: () => {
+      window.location.href = `${process.env.PUBLIC_URL.replace(istioAppDesignation, "/app2")}/admin/table`; 
+      return null;
+    },
     layout: "/admin",
     isExternal: true
   },
