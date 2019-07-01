@@ -32,7 +32,7 @@ const dashboardRoutes = [
   },
   {
     path: "/user",
-    name: "User Profile - App 3",
+    name: "User Profile - App 1",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
