@@ -38,6 +38,18 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin",
     isExternal: true
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    rtlName: "قائمة الجدول",
+    icon: "content_paste",
+    component: () => {
+      window.location.href = process.env.PUBLIC_URL.replace(istioAppDesignation, ""); 
+      return null;
+    },
+    layout: "/exit_to_app",
+    isExternal: true
   }
 ];
 
