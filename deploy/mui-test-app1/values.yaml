@@ -45,7 +45,7 @@ ingress:
 virtualService:
   enabled: true
   gateways: 
-    - istio-system/sandboxapps-dyndns-gateway
+    - istio-system/apps-devsandbox-gateway
   hosts: 
     - dev-apps.devsandbox.co
     - apps.devsandbox.co
