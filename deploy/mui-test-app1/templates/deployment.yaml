@@ -12,14 +12,12 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
-    matchLabels:
-      app.kubernetes.io/name: {{ include "mui-test-app1.name" . }}
-      app.kubernetes.io/instance: {{ .Release.Name }}
+    matchLabels: 
+        app: {{ include "mui-test-app1.name" . }}
+        version: {{ .Values.image.tag }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "mui-test-app1.name" . }}
-        app.kubernetes.io/instance: {{ .Release.Name }}   
         app: {{ include "mui-test-app1.name" . }}
         version: {{ .Values.image.tag }}
     spec:
